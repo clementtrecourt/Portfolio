@@ -78,7 +78,7 @@ const Project = ({
 
 const Projects = () => {
   return (
-    <section id="projects" className="pt-48 pb-48">
+    <section id="projets" className="pt-48 pb-48">
       {/* HEADINGS */}
       <motion.div
         className="md:w-2/5 mx-auto text-center"
@@ -93,15 +93,15 @@ const Projects = () => {
       >
         <div>
           <p className="font-playfair font-semibold text-4xl">
-            <span className="text-red">PRO</span>JETS
+            <span className="text-red">MES</span> RÉALISATIONS
           </p>
           <div className="flex justify-center mt-5">
             <LineGradient width="w-2/3" />
           </div>
         </div>
         <p className="mt-10 mb-10">
-          Au cours des années j'ai pus toucher a beaucoup de technologies
-          différentes, en passant de Wordpress, à Vanilla Javascript, à React.
+          Au cours des années, j'ai utilisé de nombreuses technologies :
+          Wordpress, Vanilla Javascript, React, Express, Node...
         </p>
       </motion.div>
 

@@ -33,7 +33,8 @@ const Contact = () => {
       >
         <div>
           <p className="font-playfair font-semibold text-4xl">
-            <span className="text-yellow">CONTACTEZ MOI</span>
+            <span className="text-[#7367F0]">CONTACTEZ-</span>
+            <span>MOI</span>
           </p>
           <div className="flex md:justify-end my-5">
             <LineGradient width="w-1/2" />
@@ -73,7 +74,7 @@ const Contact = () => {
           <form
             target="_blank"
             onSubmit={onSubmit}
-            action="https://formsubmit.co/e8a5bdfa807605332f809e5656e27c6e"
+            action="https://formsubmit.co/clement.trecourt@gmail.com"
             method="POST"
           >
             <input
@@ -133,7 +134,7 @@ const Contact = () => {
               className="p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500"
               type="submit"
             >
-              Envoyer un message
+              Envoyer le message
             </button>
           </form>
         </motion.div>
