@@ -1,4 +1,5 @@
 import React from "react";
+import SocialMediaIcons from "../components/SocialMediaIcons";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
@@ -9,7 +10,7 @@ const Landing = ({ setSelectedPage }) => {
   return (
     <section
       id="home"
-      className="md:flex md:justify-between md:items-center gap-16 md:h-full py-10"
+      className="md:flex md:justify-between md:items-center gap-16 md:h-full py-10 md:mt-[110px]"
     >
       {/* IMAGE SECTION */}
       <div className="basis-3/5 z-10 mt-16 md:mt-32 flex justify-center md:order-2">
@@ -20,7 +21,7 @@ const Landing = ({ setSelectedPage }) => {
           >
             <img
               alt="profile"
-              className="hover:filter hover:saturate-200 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]"
+              className="hover:filter hover:saturate-150 transition duration-500 z-10 w-full max-w-[400px] md:max-w-[600px]"
               src="assets/profile-image.png"
             />
           </div>
@@ -50,15 +51,17 @@ const Landing = ({ setSelectedPage }) => {
             Clément {""}
             <span
               className="xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
-            before:absolute before:-left-[30px] before:-top-[120px] before:z-[-1]"
+            before:absolute before:-left-[30px] before:-top-[130px] before:z-[-1]"
             >
               Trecourt
             </span>
           </p>
 
           <p className="mt-10 mb-7 text-sm text-center md:text-start">
-            Adipiscing arcu, in aliquam fringilla cursus. Elit arcu elementum
-            viverra malesuada sem ac faucibus dolor. Sagittis scelerisque.
+            Bonjour ! Développeur Full-Stack, passionné de nouvelles
+            technologies et pleins de bonnes idées, je propose un développement
+            performant dans la simplicité. Ma stack de prédilection se compose
+            de React, Node.js et MongoDB.
           </p>
         </motion.div>
 
@@ -103,7 +106,9 @@ const Landing = ({ setSelectedPage }) => {
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 },
           }}
-        ></motion.div>
+        >
+          <SocialMediaIcons />
+        </motion.div>
       </div>
     </section>
   );

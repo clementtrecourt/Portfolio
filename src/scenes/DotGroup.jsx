@@ -1,39 +1,35 @@
-import React from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+
 const DotGroup = ({ selectedPage, setSelectedPage }) => {
   const selectedStyles = `relative bg-yellow before:absolute before:w-6 before:h-6 before:rounded-full
     before:border-2 before:border-yellow before:left-[-50%] before:top-[-50%]`;
+
   return (
     <div className="flex flex-col gap-6 fixed top-[60%] right-7">
-      {" "}
       <AnchorLink
-        href="#accueil"
+        href="#home"
         className={`${
-          selectedPage === "accueil" ? selectedStyles : "bg-dark-grey"
+          selectedPage === "home" ? selectedStyles : "bg-dark-grey"
         } w-3 h-3 rounded-full`}
-        onClick={() => setSelectedPage("accueil")}
+        onClick={() => setSelectedPage("home")}
       />
+
       <AnchorLink
-        href="#compétences"
+        href="#skills"
         className={`${
-          selectedPage === "compétences" ? selectedStyles : "bg-dark-grey"
+          selectedPage === "skills" ? selectedStyles : "bg-dark-grey"
         } w-3 h-3 rounded-full`}
-        onClick={() => setSelectedPage("compétences")}
+        onClick={() => setSelectedPage("skills")}
       />
+
       <AnchorLink
-        href="#projets"
+        href="#projects"
         className={`${
-          selectedPage === "projets" ? selectedStyles : "bg-dark-grey"
+          selectedPage === "projects" ? selectedStyles : "bg-dark-grey"
         } w-3 h-3 rounded-full`}
-        onClick={() => setSelectedPage("projets")}
+        onClick={() => setSelectedPage("projects")}
       />
-      <AnchorLink
-        href="#témoignages"
-        className={`${
-          selectedPage === "témoignages" ? selectedStyles : "bg-dark-grey"
-        } w-3 h-3 rounded-full`}
-        onClick={() => setSelectedPage("témoignages")}
-      />
+
       <AnchorLink
         href="#contact"
         className={`${
