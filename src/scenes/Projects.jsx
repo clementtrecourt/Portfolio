@@ -1,6 +1,9 @@
 import LineGradient from "../components/LineGradient";
 import { motion } from "framer-motion";
-
+import { BsWordpress } from "react-icons/bs";
+import { DiJavascript1, DiReact } from "react-icons/di";
+import { SiExpress, SiTailwindcss } from "react-icons/si";
+import { FaPassport, FaStripeS } from "react-icons/fa";
 const container = {
   hidden: {},
   visible: {
@@ -15,19 +18,58 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title }) => {
+const Project = ({
+  title,
+  desc,
+  link,
+  github,
+  wordpress,
+  javascript,
+  express,
+  session,
+  stripe,
+  react,
+  tailwind,
+}) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
-    bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
+    bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue `;
   const projectTitle = title.split(" ").join("-").toLowerCase();
-  console.log(projectTitle);
+  console.log(github);
   return (
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair">{title}</p>
-        <p className="mt-7">
-          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla
-          porttitor accumsan tincidunt.
-        </p>
+        <p className="mt-7">{desc}</p>
+        <div className="flex">
+          {link ? (
+            <a href={link} target="_blank" rel="noreferrer">
+              <button className=" bg-[#010026] text-white p-2 mt-6 rounded hover:bg-[#00B5EE] duration-500	">
+                Visiter
+              </button>
+            </a>
+          ) : (
+            ""
+          )}
+
+          {github ? (
+            <a href={github} target="_blank" rel="noreferrer" className="ml-2">
+              <button className=" bg-[#010026] text-white p-2 mt-6 rounded hover:bg-[#00B5EE] duration-500	">
+                Github
+              </button>
+            </a>
+          ) : (
+            ""
+          )}
+        </div>
+        <div className="flex mt-4">
+          {wordpress ? <BsWordpress size={40} /> : ""}
+          {javascript ? <DiJavascript1 size={40} /> : ""}
+          {express ? <SiExpress size={40} /> : ""}
+          {session ? <FaPassport size={40} /> : ""}
+          {stripe ? <FaStripeS size={40} /> : ""}
+          {react ? <DiReact size={40} /> : ""}
+          {tailwind ? <SiTailwindcss size={40} /> : ""}
+        </div>
       </div>
       <img src={`../assets/${projectTitle}.png`} alt={projectTitle} />
     </motion.div>
@@ -72,8 +114,35 @@ const Projects = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <Project title="Project 1" />
-          <Project title="Project 2" />
+          <Project
+            title="Project 1"
+            desc="Site E-commerce"
+            wordpress
+            link="https://reecristavie.com/"
+          />
+          <Project
+            title="Project 2"
+            desc="Site Vitrine"
+            wordpress
+            link="http://liliwhite.fr/"
+          />
+          <Project
+            title="Project 3"
+            desc="Projet E-commerce"
+            javascript
+            express
+            session
+            stripe
+            link="https://bike-shop987.herokuapp.com/"
+            github="https://github.com/clementtrecourt/BikeShop"
+          />
+          <Project
+            title="Project 4"
+            desc="Ce Portfolio !"
+            react
+            tailwind
+            github="https://github.com/clementtrecourt/portfolio"
+          />
         </motion.div>
       </div>
     </section>

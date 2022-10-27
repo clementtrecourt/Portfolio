@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FaReact } from "react-icons/fa";
 import { DiNodejsSmall } from "react-icons/di";
 import { DiMongodb } from "react-icons/di";
+
 const MySkills = () => {
   const isAboveLarge = useMediaQuery("(min-width: 1060px)");
   return (
